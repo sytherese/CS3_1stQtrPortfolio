@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Q1 3rd Graded Exercise</title>
+</head>
+<body>
+
+  
+  <h2> Q1 3rd Graded Exercise submitted by Ella Sy of Magnesium </h2>
+
+  <p>Guess the number: ****</p>
+  <p>The number is from 1 to 100</p>
+
+  <input type="number" id="userGuess" min="1" max="100">
+  <button onclick="checkIt()">Check It</button>
+
+  <p id="result">Result:</p>
+
+  <script>
+    var dNumber = Math.floor(Math.random() * 100) + 1;
+
+    function checkIt() {
+      var guess = document.getElementById("userGuess").value;
+      guess = Number(guess);
+
+      if (guess < dNumber) {
+        document.getElementById("result").innerHTML = "Result: Higher";
+      } else if (guess > dNumber) {
+        document.getElementById("result").innerHTML = "Result: Lower";
+      } else {
+        document.getElementById("result").innerHTML = "Result: You are correct!";
+      }
+    }
+  </script>
+
+  <footer>
+    <h3>References</h3>
+    <p>W3Schools. (n.d.). <i>JavaScript Random</i>. W3Schools. Retrieved August 22, 2025, from 
+      <a href="https://www.w3schools.com/js/js_random.asp">https://www.w3schools.com/js/js_random.asp</a>
+    </p>
+    <p>W3Schools. (n.d.). <i>JavaScript HTML DOM</i>. W3Schools. Retrieved August 22, 2025, from 
+      <a href="https://www.w3schools.com/js/js_htmldom.asp">https://www.w3schools.com/js/js_htmldom.asp</a>
+    </p>
+    <p>Mozilla. (n.d.). <i>Math.random() – JavaScript | MDN</i>. MDN Web Docs. Retrieved August 22, 2025, from 
+      <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random</a>
+    </p>
+  </footer>
+
+</body>
+</html>
